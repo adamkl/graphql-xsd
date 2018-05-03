@@ -1,5 +1,7 @@
 # graphql-xsd
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adamkl/graphql-xsd.svg)](https://greenkeeper.io/)
+
 A simple graphql-to-xsd generator (inelegantly leveraging [graphql-code-generator](https://github.com/dotansimha/graphql-code-generator))
 
 ## Install
