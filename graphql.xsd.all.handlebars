@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="{{ namespace }}" xmlns="{{ namespace }}" xmlns:tns="{{ namespace }}">
+
+{{#each types}}
+  {{#ifCond name "!==" "Query" }}
+    {{#ifCond name "!==" "Mutation" }}
+  <xs:complexType name="{{ name }}">
+    <xs:sequence>
+  {{#each fields}} 
+      <xs:element name="{{ name }}" type="{{#if isType}}tns:{{/if}}{{ toPrimitive type }}" minOccurs="{{#if isRequired}}1{{else}}0{{/if}}" maxOccurs="{{#if isArray}}unbounded{{else}}1{{/if}}" />
+  {{/each}} 
+    </xs:sequence>
+  </xs:complexType>
+    {{/ifCond}}
+  {{/ifCond}}
+
+{{/each}}
+
+{{#each inputTypes}}
+  <xs:complexType name="{{ name }}">
+    <xs:sequence>
+  {{#each fields}} 
+      <xs:element name="{{ name }}" type="{{#if isType}}tns:{{/if}}{{ toPrimitive type }}" minOccurs="{{#if isRequired}}1{{else}}0{{/if}}" maxOccurs="{{#if isArray}}unbounded{{else}}1{{/if}}" />
+  {{/each}} 
+    </xs:sequence>
+  </xs:complexType>
+
+{{/each}}
+
+{{#each enums}}
+  <xs:simpleType name="{{ name }}" final="restriction" >
+    <xs:restriction base="xs:string">
+  {{#each values}} 
+      <xs:enumeration value="{{ value }}" />
+  {{/each}} 
+    </xs:restriction>
+  </xs:simpleType>
+
+{{/each}}
+</xs:schema>

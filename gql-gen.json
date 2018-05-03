@@ -1,0 +1,14 @@
+{
+  "inputType": "SINGLE_FILE",
+  "primitives": {
+    "String": "xs:string",
+    "Int": "xs:long",
+    "Float": "xs:double",
+    "Boolean": "xs:boolean",
+    "ID": "xs:string",
+    "DateTime": "xs:dateTime"
+  },
+  "customHelpers": {
+    "namespace": "./namespace.js"
+  }
+}
