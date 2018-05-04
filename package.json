@@ -1,6 +1,7 @@
 {
   "name": "graphql-xsd",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "A simple graphql-to-xsd generator",
   "main": "index.js",
   "bin": "index.js",
   "author": "Adam Kreczko-Lenner",
@@ -14,7 +15,12 @@
     "graphql": "^0.13.2",
     "graphql-code-generator": "^0.8.21"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  }
+  "keywords": [
+    "graphql",
+    "xsd",
+    "schema",
+    "converter",
+    "generator",
+    "parser"
+  ]
 }
