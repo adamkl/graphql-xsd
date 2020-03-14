@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.15.1",
+    "commander": "^5.0.0",
     "graphql": "^0.13.2",
     "graphql-code-generator": "^0.8.21"
   },
